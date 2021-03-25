@@ -1,28 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
-int factorial(int n)
-{
-	int result = 1;
-	while (n > 1)
-	{
-		result *= n;
-		n -= 1;
-	}
-	return result;
-}
-int main()
-{
-	int n = 0;
-	scanf("%d\n", &n);
-	int fac=factorial(n);
-	printf("%d\n", fac);
-	return 0;
-}
-
-#define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-#include <stdlib.h>
 
 
 //int main()
