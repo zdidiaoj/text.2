@@ -1,0 +1,96 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <assert.h>
+
+//int check_sys()
+//{
+//	int i = 1;
+//	return (*((char*)&i));
+//}
+
+//int check_sys()
+//{
+//	union 
+//	{
+//		int i;
+//		char c;
+//	}un;
+//	un.c = 1;
+//	return un.c;
+//}
+//
+//int main()
+//{
+//	int ret = check_sys();
+//	if (ret == 1)
+//	{
+//		printf("小端\n");
+//	}
+//	else
+//	{
+//		printf("大端\n");
+//	}
+//	return 0;
+//}
+
+//模拟strlen函数
+//int my_strlen(const char *p)
+//{
+//	int count = 0;
+//	assert(*p != NULL);
+//	while (*p)
+//	{
+//		count++;
+//		*p++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	const char *p = "abcdef";
+//	int len=my_strlen(p);
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+
+
+//模拟实现一个stelen函数参考代码:
+//void test1()
+//{
+//	int n = 10;
+//	int m = 20;
+//	int *p = &n;
+//	*p = 20;
+//	p = &m;
+//	
+//}
+//void test2()
+//{
+//	int n = 20;
+//	int m = 20;
+//	const int*p = &n;
+//	*p = 30;
+//	p = &m;
+//}
+//void test3()
+//{
+//	int n = 10;
+//	int m = 20;
+//	int *const p = &n;
+//	*p = 20;
+//	p = &m;
+//}
+//int main()
+//{
+//	//测试无const的
+//	test1();
+//	//测试const放在*的左边
+//	test2();
+//	//测试const放在*的右边
+//	test3();
+//	return 0;
+//}
+//结论：const修饰指针变量的时候：
+//1,const如果放在*左边，修饰的是指针指向的内容，保证指针指向的内容不能通过指针来改变。但是指针变量本身的内容可变。
+//2，const弱国放在*的右边，修饰的是指针变量本身，保证了指针变量的内容不能修改，但是指针指向的内容，可以逃过指针改变。
