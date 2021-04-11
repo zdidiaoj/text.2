@@ -1,0 +1,16 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+void text(int arr[3][5])
+{}
+void text1(int arr[3][5])
+{}
+void text2(int arr[3][])//err
+{}
+int main(){
+	int arr[3][5] = {0};
+
+	text(arr);
+	text1(arr);
+	text2(arr);
+
+	return 0;
+}
