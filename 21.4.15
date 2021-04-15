@@ -32,7 +32,7 @@ int main()
 	int input = 0;
 	int x = 0;
 	int y = 0;
-	int(*pfArr[5])(int, int);
+	int(*pfArr[5])(int, int)={0，Add，Sub，Mul，Div};
 	do
 	{
 		menu();
